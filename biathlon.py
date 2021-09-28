@@ -21,7 +21,7 @@ def is_closed(target):
         return(False)
     
 def new_targets():
-    targets = [open(), open(), open(), open(), open()]
+    targets = [open()] * 5
     return(targets)
 
 def close_target(target, targets):
@@ -32,11 +32,11 @@ def hits(targets):
     hit = 0
     for n in range(5):
         if is_closed(targets[n]) == True:
-            hit = hit + 1        
+            hit +=1        
     print(hit)
     
 def target_to_string(target):
-    if is_open(target) == True:
+    if is_open(target):
         return("* ")
     else:
         return("0 ")
