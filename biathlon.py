@@ -69,9 +69,11 @@ while targets_to_string(ts) != ("0 0 0 0 0 "):
     x = input("Choose target: ")
     try:
         x = int(x)
-        if x < 4
+        if x <= 4
             shoot(x, ts)
-            view_targets(ts)  
+            view_targets(ts)
+        else:
+            print("Invalid target")
     except (ValueError, IndexError):
         print("Invalid target")
 print("Game over, all targets hit") 
