@@ -31,7 +31,7 @@ def close_target(target, targets):
 def hits(targets):
     hit = 0
     for n in range(5):
-        if is_closed(targets[n]) == True:
+        if is_closed(targets[n]):
             hit +=1        
     print(hit)
     
@@ -54,8 +54,8 @@ def random_hit():
     return(is_open(randint(0,1)))
 
 def shoot(target, targets):
-    if random_hit()==True:
-        if is_open(targets[target])==True:
+    if random_hit():
+        if is_open(targets[target]):
             print("Hit on open target")
             close_target(target, targets)
         else:
